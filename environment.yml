@@ -1,0 +1,20 @@
+name: ncp
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.9
+  - notebook
+  - scikit-learn
+  - matplotlib
+  - numpy
+  - pandas
+  - scipy
+  - seaborn
+  - xarray
+  - pip
+  - pip:
+      - scikit-fda
+      - sklearn-xarray
+      - sliced

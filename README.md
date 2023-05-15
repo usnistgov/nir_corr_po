@@ -1,152 +1,118 @@
-# NIST Open-Source Software Repository Template
+# Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins, using Principal Component Analysis
 
-Use of GitHub by NIST employees for government work is subject to
-the [Rules of Behavior for GitHub][gh-rob]. This is the
-recommended template for NIST employees, since it contains
-required files with approved text. For details, please consult
-the Office of Data & Informatics' [Quickstart Guide to GitHub at
-NIST][gh-odi].
+This repository supports the following submitted manuscript:
 
-Please click on the green **Use this template** button above to
-create a new repository under the [usnistgov][gh-nst]
-organization for your own open-source work. Please do not "fork"
-the repository directly, and do not create the templated
-repository under your individual account.
+Bradley P. Sutliff, Shailja Goyal, Tyler B. Martin, Peter A. Beaucage, Debra J. Audus, and Sara V. Orski, "Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins, using Principal Component Analysis"  *Macromolecular Rapid Communications* **2023** *NUM* (NUM), PAGES DOI:
 
-The key files contained in this repository -- which will also
-appear in templated copies -- are listed below, with some things
-to know about each.
+which uses functional principal component analysis to connect near-visible infrared (NIR) spectra of polyolefins with physical properties to enable better sorting of these materials.
 
----
+The repository is intended for the following use cases:
 
-## README
+- Illustrate key ideas from the submitted manuscript including using functional principal component analysis and sliced inverse regression for correlating NIR with physical properties.
+- Reproduce figures from our submitted manuscript
+- Allow for full reproducibility of the data in the submitted manuscript
 
-Each repository will contain a plain-text [README file][wk-rdm],
-preferably formatted using [GitHub-flavored Markdown][gh-mdn] and
-named `README.md` (this file) or `README`.
+## Running the notebook
 
-Per the [GitHub ROB][gh-rob] and [NIST Suborder 1801.02][nist-s-1801-02],
-your README should contain:
+The included notebook `nir-corr-po.ipynb` allows the user to reproduce all of the figures in the corresponding submitted manuscript, using the corresponding data. The notebook is setup to walk the user through each of the prepossessing and analyzing steps, generating corresponding figures along the way. All code is written in Python and requires Python == 3.9. It can be used on any operating system. Other requirements are listed in `requirements.txt`.
 
-1. Software or Data description
-   - Statements of purpose and maturity
-   - Description of the repository contents
-   - Technical installation instructions, including operating
-     system or software dependencies
-1. Contact information
-   - PI name, NIST OU, Division, and Group names
-   - Contact email address at NIST
-   - Details of mailing lists, chatrooms, and discussion forums,
-     where applicable
-1. Related Material
-   - URL for associated project on the NIST website or other Department
-     of Commerce page, if available
-   - References to user guides if stored outside of GitHub
-1. Directions on appropriate citation with example text
-1. References to any included non-public domain software modules,
-   and additional license language if needed, *e.g.* [BSD][li-bsd],
-   [GPL][li-gpl], or [MIT][li-mit]
+The code can either be run locally or in [Google Colab](https://colab.research.google.com/).
 
-The more detailed your README, the more likely our colleagues
-around the world are to find it through a Web search. For general
-advice on writing a helpful README, please review
-[*Making Readmes Readable*][18f-guide] from 18F and Cornell's
-[*Guide to Writing README-style Metadata*][cornell-meta].
+### Run notebook locally (option 1)
 
-## LICENSE
+#### Clone the code
 
-Each repository will contain a plain-text file named `LICENSE.md`
-or `LICENSE` that is phrased in compliance with the Public Access
-to NIST Research [*Copyright, Fair Use, and Licensing Statement
-for SRD, Data, and Software*][nist-open], which provides
-up-to-date official language for each category in a blue box.
+First clone the code via
 
-- The version of [LICENSE.md](LICENSE.md) included in this
-  repository is approved for use.
-- Updated language on the [Licensing Statement][nist-open] page
-  supersedes the copy in this repository. You may transcribe the
-  language from the appropriate "blue box" on that page into your
-  README.
+```bash
+git clone https://github.com/usnistgov/nir_corr_po.git
+```
 
-If your repository includes any software or data that is licensed
-by a third party, create a separate file for third-party licenses
-(`THIRD_PARTY_LICENSES.md` is recommended) and include copyright
-and licensing statements in compliance with the conditions of
-those licenses.
+and navigate to the directory where the repository lives
 
-## CODEOWNERS
+```bash
+cd nir_corr_po
+```
 
-This template repository includes a file named
-[CODEOWNERS](CODEOWNERS), which visitors can view to discover
-which GitHub users are "in charge" of the repository. More
-crucially, GitHub uses it to assign reviewers on pull requests.
-GitHub documents the file (and how to write one) [here][gh-cdo].
+Next, one needs to create a virtual environment. This can be done using Python virtual environments or with Anaconda. Both options are listed below.
 
-***Please update that file*** to point to your own account or
-team, so that the [Open-Source Team][gh-ost] doesn't get spammed
-with spurious review requests. *Thanks!*
+#### Create a Python virtual environment (option 1)
 
-## CODEMETA
+First, make sure you are using Python 3.9.
 
-Project metadata is captured in `CODEMETA.yaml`, used by the NIST
-Software Portal to sort your work under the appropriate thematic
-homepage. ***Please update this file*** with the appropriate
-"theme" and "category" for your code/data/software. The Tier 1
-themes are:
+```bash
+python3 -m venv env
+```
 
-- [Advanced communications](https://www.nist.gov/advanced-communications)
-- [Bioscience](https://www.nist.gov/bioscience)
-- [Buildings and Construction](https://www.nist.gov/buildings-construction)
-- [Chemistry](https://www.nist.gov/chemistry)
-- [Electronics](https://www.nist.gov/electronics)
-- [Energy](https://www.nist.gov/energy)
-- [Environment](https://www.nist.gov/environment)
-- [Fire](https://www.nist.gov/fire)
-- [Forensic Science](https://www.nist.gov/forensic-science)
-- [Health](https://www.nist.gov/health)
-- [Information Technology](https://www.nist.gov/information-technology)
-- [Infrastructure](https://www.nist.gov/infrastructure)
-- [Manufacturing](https://www.nist.gov/manufacturing)
-- [Materials](https://www.nist.gov/materials)
-- [Mathematics and Statistics](https://www.nist.gov/mathematics-statistics)
-- [Metrology](https://www.nist.gov/metrology)
-- [Nanotechnology](https://www.nist.gov/nanotechnology)
-- [Neutron research](https://www.nist.gov/neutron-research)
-- [Performance excellence](https://www.nist.gov/performance-excellence)
-- [Physics](https://www.nist.gov/physics)
-- [Public safety](https://www.nist.gov/public-safety)
-- [Resilience](https://www.nist.gov/resilience)
-- [Standards](https://www.nist.gov/standards)
-- [Transportation](https://www.nist.gov/transportation)
+where `env` is the location of the virtual environment
 
----
+Activate the virtual environment
 
-[usnistgov/opensource-repo][gh-osr] is developed and maintained
-by the [opensource-team][gh-ost], principally:
+```bash
+source env/bin/activate
+```
 
-- Gretchen Greene, @GRG2
-- Yannick Congo, @faical-yannick-congo
-- Trevor Keller, @tkphd
+Install dependencies
 
-Please reach out with questions and comments.
+```bash
+python3 -m pip install -r requirements.txt
+```
 
-<!-- References -->
+#### Create a virtual environment with Anaconda (option 2)
 
-[18f-guide]: https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md
-[cornell-meta]: https://data.research.cornell.edu/content/readme
-[gh-cdo]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
-[gh-mdn]: https://github.github.com/gfm/
-[gh-nst]: https://github.com/usnistgov
-[gh-odi]: https://odiwiki.nist.gov/ODI/GitHub.html
-[gh-osr]: https://github.com/usnistgov/opensource-repo/
-[gh-ost]: https://github.com/orgs/usnistgov/teams/opensource-team
-[gh-rob]: https://odiwiki.nist.gov/pub/ODI/GitHub/GHROB.pdf
-[gh-tpl]: https://github.com/usnistgov/carpentries-development/discussions/3
-[li-bsd]: https://opensource.org/licenses/bsd-license
-[li-gpl]: https://opensource.org/licenses/gpl-license
-[li-mit]: https://opensource.org/licenses/mit-license
-[nist-code]: https://code.nist.gov
-[nist-disclaimer]: https://www.nist.gov/open/license
-[nist-s-1801-02]: https://inet.nist.gov/adlp/directives/review-data-intended-publication
-[nist-open]: https://www.nist.gov/open/license#software
-[wk-rdm]: https://en.wikipedia.org/wiki/README
+First, install [conda](https://www.anaconda.com).
+Then run the following in a conda-enabled terminal.
+
+```bash
+conda env create -f environment.yml
+```
+This yml file will automatically name the new environment `ncp`.
+
+If you are using conda>=4.6, activate the virtual environment via
+
+```bash
+conda activate ncp
+```
+
+Otherwise, see the [conda docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
+#### Run the notebook
+
+The Jupyter notebook can by run by using the command
+
+```bash
+jupyter notebook
+```
+
+### Running notebook in Google Colab (option 2)
+
+If you are interested in running the notebook in [Google Colab](https://colab.research.google.com/), first click on the relevant link below. Note that these links were generated by navigating to the notebook of interest on the nir_corr_po GitHub page, for example, `https://github.com/usnistgov/nir_corr_po/nir-corr-po.ipynb` and then replace `github.com` with `githubtocolab.com`.
+
+- [nir-corr-po](https://githubtocolab.com/usnistgov/nir_corr_po/blob/main/nir-corr-po.ipynb)
+
+This should open the notebook in Google Colab. 
+
+## Contact
+
+Bradley P. Sutliff, PhD  
+Materials Science and Engineering Division  
+Material Measurement Laboratory  
+National Institute of Standards and Technology  
+
+Email: Bradley.Sutliff@nist.gov  
+GithubID: @bpsut  
+Staff website: https://www.nist.gov/people/bradley-sutliff  
+
+## How to cite
+
+If you use the code, please cite our submitted manuscript:
+
+Bradley P. Sutliff, Shailja Goyal, Tyler B. Martin, Peter A. Beaucage, Debra J. Audus, and Sara V. Orski, "Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins, using Principal Component Analysis" *Macromolecular Rapid Communications* 2023 NUM (NUM), PAGES DOI:
+
+If you use the data, please cite:
+
+Sutliff, Bradley; Goyal, Shailja; Martin, Tyler; Beaucage, Peter; Audus, Debra; Orski, Sara (2023), Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins, using Principal Component Analysis, National Institute of Standards and Technology, https://doi.org/10.18434/NUM (Accessed YYYY-MM-DD)
+
+## Future updates and maintenance
+
+There is no intent to update/maintain this repository once it is released to the public, given that it is intended to reproduce published figures and analysis that should not change over time. 
