@@ -1,19 +1,20 @@
+---
 name: ncp
 channels:
   - anaconda
   - conda-forge
   - defaults
 dependencies:
-  - python==3.9
-  - notebook
-  - scikit-learn
   - matplotlib
-  - numpy
+  - notebook
+  - numpy<=1.23
   - pandas
+  - pip
+  - python==3.9
+  - scikit-learn
   - scipy
   - seaborn
   - xarray
-  - pip
   - pip:
       - scikit-fda
       - sklearn-xarray
