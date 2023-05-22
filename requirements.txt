@@ -1,11 +1,11 @@
-  notebook
-  scikit-learn
-  matplotlib
-  numpy<=1.23
-  pandas
-  scipy
-  seaborn
-  xarray
-  scikit-fda
-  sklearn-xarray
-  sliced
+matplotlib
+notebook
+numpy<=1.23
+pandas
+scikit-fda
+scikit-learn
+scipy
+seaborn
+sklearn-xarray
+sliced
+xarray
