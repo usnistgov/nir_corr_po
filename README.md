@@ -25,7 +25,7 @@ The repository is intended for the following use cases:
 
 The included notebook `nir-corr-po.ipynb` allows the user to reproduce all of
 the figures in the corresponding submitted manuscript, using the corresponding
-data. The notebook is setup to walk the user through each of the prepossessing
+data. The notebook is setup to walk the user through each of the preprocessing
 and analyzing steps, generating corresponding figures along the way. All code
 is written in Python and requires Python == 3.9. It can be used on any
 operating system. Other requirements are listed in `requirements.txt`.
