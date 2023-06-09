@@ -137,7 +137,7 @@ If you use the data, please cite:
 > Audus, Debra; Orski, Sara. Correlations of Near-Infrared Spectra to
 > Bulk Properties in Polyolefins, using Principal Component Analysis,
 > National Institute of Standards and Technology (2023),
-> <https://doi.org/10.18434/NUM> (Accessed YYYY-MM-DD)
+> <https://doi.org/10.18434/mds2-3022> (Accessed YYYY-MM-DD)
 
 ## Future updates and maintenance
 
