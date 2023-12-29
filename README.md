@@ -6,7 +6,7 @@ This repository supports the following submitted manuscript:
 > Debra J. Audus, and Sara V. Orski,
 > "Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins,
 > using Principal Component Analysis."
-> *Macromolecular Rapid Communications* **NUM** (2023) PAGES.
+> *Macromolecules* **NUM** (2023) PAGES.
 > DOI: .
 
 which uses functional principal component analysis to connect
