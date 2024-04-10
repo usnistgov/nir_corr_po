@@ -1,13 +1,12 @@
 # Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins, using Principal Component Analysis
 
-This repository supports the following submitted manuscript:
+This repository supports the following peer-reviewed manuscript:
 
 > Bradley P. Sutliff, Shailja Goyal, Tyler B. Martin, Peter A. Beaucage,
 > Debra J. Audus, and Sara V. Orski,
-> "Correlations of Near-Infrared Spectra to Bulk Properties in Polyolefins,
-> using Principal Component Analysis."
-> *Macromolecules* **NUM** (2023) PAGES.
-> DOI: .
+> "Correlating Near-Infrared Spectra to Bulk Properties in Polyolefins"
+> *Macromolecules* 2024, 57. 5. 2329-2338
+> DOI: https://doi.org/10.1021/acs.macromol.3c02290
 
 which uses functional principal component analysis to connect
 near-visible infrared (NIR) spectra of polyolefins with physical
