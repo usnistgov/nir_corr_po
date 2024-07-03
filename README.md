@@ -126,9 +126,10 @@ Staff website: <https://www.nist.gov/people/bradley-sutliff>
 If you use the code, please cite our submitted manuscript:
 
 > Bradley P. Sutliff, Shailja Goyal, Tyler B. Martin, Peter A. Beaucage,
-> Debra J. Audus, and Sara V. Orski, "Correlations of Near-Infrared Spectra
-> to Bulk Properties in Polyolefins, using Principal Component Analysis."
-> *Macromolecular Rapid Communications* **NUM** (2023) PAGES. DOI: .
+> Debra J. Audus, and Sara V. Orski,
+> "Correlating Near-Infrared Spectra to Bulk Properties in Polyolefins"
+> *Macromolecules* 2024, 57. 5. 2329-2338
+> DOI: https://doi.org/10.1021/acs.macromol.3c02290
 
 If you use the data, please cite:
 
